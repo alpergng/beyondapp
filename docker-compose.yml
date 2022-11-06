@@ -4,9 +4,9 @@ services:
     image: beyond-app
     container_name : beyond-app
     ports:
-      - "8080:8080"
+      - 8080:8080
     networks:
-      - spring-mysql  
+      - spring-mysql 
     depends_on:
       - mysqldb
 
@@ -16,7 +16,7 @@ services:
     networks:
       - spring-mysql
     ports:
-      - "3306:3306"
+      - 3306:3306
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=root
